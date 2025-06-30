@@ -36,3 +36,29 @@ driver zephyr port from https://github.com/foldedtoad/dwm1001.git
 
 Also thank you for your help by porting from DWM1001-DEV to DWM3001CDK
 https://github.com/br101/zephyr-dw3000-decadriver
+
+# How to Use with NCS v3.0.2 and VSCode nRF Extension
+
+If you want to use this forked project in Nordic Connect SDK (NCS) v3.0.2 with the VSCode nRF extension, follow these steps:
+
+1. **Add the following to your `west.yml` in the `nrf` folder:** (refer to the format in the original file)
+
+   ```yaml
+   - name: uwb
+     url-base: https://github.com/LG-UINT/
+   - name: uwb_zephyr_dwm3001cdk
+     remote: uwb
+     repo-path: uwb_zephyr_dwm3001cdk
+     path: uwb_zephyr_dwm3001cdk
+     revision: main
+   ```
+
+2. **Run the following command to download this library:**
+   ```bash
+   west update
+   ```
+
+3. **After updating, you will see a `uwb_zephyr_dwm3001cdk` folder under your NCS v3.0.2 workspace.**
+
+You can now use and develop this project within the NCS environment using the VSCode nRF extension.
+
