@@ -8,8 +8,8 @@
 #include <zephyr/sys/printk.h>
 #include <zephyr/kernel.h>
 
-#include "sit_led.h"
-#include "ble_device.h"
+#include <sit_led/sit_led.h>
+#include <sit_ble/ble_device.h>
 
 #define APP_NAME "SIMPLE BLE EXAMPLE\n"
 
